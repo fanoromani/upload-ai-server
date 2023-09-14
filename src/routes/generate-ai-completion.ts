@@ -1,6 +1,5 @@
 import { FastifyInstance } from "fastify";
 import { z } from "zod";
-import { createReadStream } from "node:fs";
 import { prisma } from "../lib/prisma";
 import { openai } from "../lib/openai";
 
