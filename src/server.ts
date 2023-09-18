@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { fastify } from "fastify";
 import { fastifyCors } from "@fastify/cors";
 import { getAllPromptsRoute } from "./routes/get-all-prompts";
@@ -8,7 +9,7 @@ import { generateAICompletionRoute } from "./routes/generate-ai-completion";
 const app = fastify();
 
 app.register(fastifyCors, {
-  origin: "*",
+  origin: process.env.CORS_ORIGIN,
 });
 app.register(getAllPromptsRoute);
 app.register(uploadVideoRoute);
