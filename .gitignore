@@ -1,4 +1,4 @@
 node_modules
-temp
+temp/*
 # Keep environment variables out of version control
 .env

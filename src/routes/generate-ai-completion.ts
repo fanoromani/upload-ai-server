@@ -32,7 +32,7 @@ export async function generateAICompletionRoute(app: FastifyInstance) {
     );
 
     const response = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
+      model: "gpt-3.5-turbo-16k",
       temperature,
       messages: [
         {
